@@ -5,7 +5,7 @@ export default async function connect() {
     const dbConnection = await mongoose.connect(process.env.MONGODB_URI);
 
     console.log(
-      `Connected to the database. DB_NAME: ${dbConnection.connection.name}`
+      `Connected to the database. Database Named: ${dbConnection.connection.name}`
     );
   } catch (error) {
     console.log(error);
