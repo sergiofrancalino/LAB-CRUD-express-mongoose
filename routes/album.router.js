@@ -37,7 +37,7 @@ albumRoute.get("/albums/:albumId", async (req, res) => {
     const oneAlbum = await AlbumModel.findById(albumId);
 
     if (!oneAlbum) {
-      return res.status(400).json({ err: "não existe!" });
+      return res.status(400).json({ err: "Don't found!" });
     }
     return res.status(200).json(oneAlbum);
   } catch (error) {

@@ -26,9 +26,7 @@ purchaseRoute.get("/purchases/:purchaseId", async (req, res) => {
   try {
     const { purchaseId } = req.params;
 
-    const onePurchase = await PurchaseModel.findById(purchaseId).populate(
-      "album"
-    );
+    const onePurchase = await PurchaseModel.findById(purchaseId).populate("album");
 
     return res.status(201).json(onePurchase);
   } catch (error) {
